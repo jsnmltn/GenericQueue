@@ -1,28 +1,30 @@
-import javax.lang.model.util.ElementScanner14;
+//Written By Jason Milton
 
 public class arrQueue<T> implements Queue<T> {
     public static int length;
-    private T[] data;
+    protected T[] data;
     protected int headIndex = 0;// first element
     protected int tailIndex;// First Null element / 1 past the last element
     protected int elements =0;
     protected int size;
-    public static final int DEF_SIZE = 20;
-
-    public arrQueue() {
-        this.init(DEF_SIZE);
-    }
-
-    public arrQueue(int size) {
-        this.init(size);
-    }
-
+   
     @SuppressWarnings("unchecked")
-    private void init(int size) {
-        if(size >= 1) {
+    public arrQueue() {
+        data = (T[]) new arrQueue[10];
+        tailIndex = data.length - 1;
+    }
+    @SuppressWarnings("unchecked")
+    public arrQueue(int size) {
+        if (size >= 1) {
             data = (T[]) (new Object[size]);
+            tailIndex = size- 1;
         } else
-            data = (T[]) (new Object[DEF_SIZE]);
+            data = (T[]) (new Object[10]);
+            tailIndex = data.length - 1;
+    }
+
+    public int size(int size) {
+        return size;
     }
 
     @Override
@@ -79,5 +81,6 @@ public class arrQueue<T> implements Queue<T> {
     public int getElements(){
         return this.elements;
     }
+
 
 }
