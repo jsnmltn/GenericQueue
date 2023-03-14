@@ -1,4 +1,4 @@
-import javax.lang.model.util.ElementScanner14;
+//Written By Jason Milton
 
 public class arrQueue<T> implements Queue<T> {
     public static int length;
@@ -13,8 +13,8 @@ public class arrQueue<T> implements Queue<T> {
         this.init(DEF_SIZE);
     }
 
-    public arrQueue(int size) {
-        this.init(size);
+    public int size(int size) {
+        return size;
     }
 
     @SuppressWarnings("unchecked")
@@ -79,5 +79,6 @@ public class arrQueue<T> implements Queue<T> {
     public int getElements(){
         return this.elements;
     }
+
 
 }
