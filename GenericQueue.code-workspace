@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "FormatingEfficiency",
+			"path": "../GenericQueue.worktrees/FormatingEfficiency"
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"src"
+		],
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		],
+		"java.format.settings.url": "eclipse-formatter.xml"
+	}
+}
