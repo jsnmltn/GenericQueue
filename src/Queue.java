@@ -1,3 +1,5 @@
+
+
 public class Queue<T> {
     protected int maxSize;
     protected T[] data;
@@ -65,6 +67,7 @@ public class Queue<T> {
         for (int i = (headIndex + 1) % data.length; i != tailIndex; i = (i + 1) % data.length)
             System.out.println(data[i]);
     }
+
 
 
     
